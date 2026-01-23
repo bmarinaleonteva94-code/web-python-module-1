@@ -1,107 +1,86 @@
-# my_list = [1,2,3, True]
-# my_list1 = [[1,2], [3,4]]
-# print (my_list)
-# print(len(my_list))
-# print(my_list[2])
-# print(len(my_list1))
+#  в файле .gitignor записать:
+#          venv
+#          venv/
+#          /venv
 
-# numbers = [1,2,3,4,5]
-# total = sum(numbers)
-# print(total)
-
-# maximum = max(numbers)
-# minimum = min(numbers)
-# print(maximum, minimum)
+# python -m venv venv  или python3 -m venv venv или   py -m venv venv
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+# .\venv\Scripts\Activate.ps1
 
 
+# print ("123", "hello", sep="#", end="\n")   # sep="#" заменяет пробел между двумя строка на #    \n перенос следующей строки на новую строку
+# print("Проверка переноса")
 
-# numbers = [3,66,7,9,2,44,5]
-# sorted_nums = sorted(numbers)
-# sorted_nums1 = sorted(numbers, reverse=True)
-# print(sorted_nums)
-# print(sorted_nums1)
+# num = 0
+# txt = "Текст"
+# print(num, txt)
+# print(f"Привет, {txt}")
 
-# rev = reversed(numbers)
-# print(list(rev))
+# text_str = input("Введите текст: ")
+# print(text_str)
 
-# fruits = ['apple', 'cherry', 'banana']
-# for index, fruit in enumerate(fruits):
-#     print(f"{index}: {fruit}")
+# num = int(input("Введите число: "))   # int - целое число   float - число с плавающей точкой
+# print(num, num*2)
+# print(num**3)     #  x**y - возведение числа x в степень y
+# print(num//2)    #   // - целочисленное деление
 
-# num = ['1','2','3','6']
-# num1 = [1,2,3]
-# s = list(map(lambda x: x**2, num1))
-# s1 = list(map(int, num))
-# print(s)
-# print(s1)
+# min_num = min(2,4,5,66,5)   # min - выводит минимальное число   max - максимальное число
+# max_num = max(22,3,55,3,9)
+# print(min_num, max_num)
 
-# def double():
-#     return num1*2
-# list_double = list(map(double, s))
-# print(list_double)
-# def filter_func(num): 
-#     return num % 2 == 0
-# numbers = [1,2,3,4,5,6,7,8,9,10]
-# evens = list(filter(lambda x: x % 2 ==0, numbers))
-# evens1 = list(filter(filter_func, numbers))
-# print(evens, evens1)
+# age = int(input("Введите ваш возраст: "))
+# access = True
+# if age<18:
+#     print("no")
+# elif age>18 and age<30:
+#     print("ok")
+# else:
+#     print("yes")
 
+# day = "Суббота"
+# if day == "Суббота" or day == "Воскресенье":
+#     print("Выходной")
+# else:
+#     print("Будни")
 
-# words = ['paper', 'tomato', 'apple']
-# result = ','.join(words)
-# print(result)
+# is_running_pc = False
+# if not is_running_pc:
+#     print("Выключен")
+# else:
+#     print("Включен")
 
+# for item in range(5):
+#     print(item)
 
-# my_list = ['apple', 'ban', 2]
-# my_list.append(4)     # добавляет новый элемент в список  
-# my_list.extend([5,6])
-# my_list.extend('apple')   #разбивает слово на отдельные элементы
-# print(my_list)
+# for item1 in range (2,20,2):     # от 2 до 19 с шагом в 2
+#     print(item1)
 
-# my_list1 = ['banana', 3, 'a']
-# new_list = my_list + my_list1    
-# print(new_list)
+# text_str = "hello"
+# for i in text_str:      # выводит каждую букву на новой строке
+#     print(i)
 
-# my_list.insert(1,'code')   #добавляет новый элемент code после элемента с индексом 0
+# while True:
+#     input_str = input("Введите 'выход' для выхода из цикла ")
+#     if input_str == "выход":                     # выводит набранную строку до выхода из цикла, при наборе "выход" цикл заканчивается
+#         break
+#     print(input_str)
 
-# my_list.remove(2)
-
-# my_list.pop()  #удаляет последний элемент
-# my_list.pop(1)  #удаляет элемент с индексом 1
-
-# my_list.clear()
-
-# print(my_list)
-
-
-# my_list = [5,6,7,32,44,5,5,55]
-# count = my_list.count(5)
-# print(count)
-
-# my_list.sort()
-# # my_list.sort(reverse=True)
-# my_list.reverse()
-# print(my_list)
-
-
-my_list = [1,2,3,-4,-5,6,7,8,9,10]
-# print(my_list[0:5])     #print(my_list[start:end:step])   выводит элементы с индекса 0 до индекса 5
-# print(my_list[0:6:2])      # шаг 2: выведет 1, 3,5
-# print(my_list[:6])   # с начала до индекса 6    my_list[3:]   с индекса 3 до конца
-# print(my_list[:])   #копирует my_list
-# print(my_list[-1])
-# print(my_list[::-1])   #разворачивает список
-
-res = [x**2 for x in my_list]   #генератор, то же самое, что и запись ниже
-
-result = []
-for x in my_list:
-    result.append(x**2)
-print(res, result)
-
-res = [x**2 for x in my_list if x%2==0]
-print(res)
-
-res1 = [0 if x<0 else x for x in my_list]
-print(res1)
-
+while True:
+    print("===Меню===")
+    print("1. Сложение")
+    print("2. Вычитание")
+    print("3. Выход")
+    option_str = input("Выберите опцию (1-3) ")
+    if option_str == "1":
+        a = float(input("Введите первое число: "))
+        b = float(input("Введите второе число: "))
+        print(f"Результат: {a+b}")
+    elif option_str == "2":
+        a = float(input("Введите первое число: "))
+        b = float(input("Введите второе число: "))
+        print(f"Результат: {a-b}")
+    elif option_str == "3":
+        print("Выход из программы")
+        break
+    else:
+        print("Неверная опция ")

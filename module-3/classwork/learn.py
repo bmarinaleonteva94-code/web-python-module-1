@@ -141,9 +141,9 @@
 
 
 # tuple_1 = (1,2,3)     #кортеж, не изменяемый, нельзя менять длину
-tuple_1_sym = ("b")
-tuple_2_sym = ("b",)
-print(tuple_1_sym, tuple_2_sym)
+# tuple_1_sym = ("b")
+# tuple_2_sym = ("b",)
+# print(tuple_1_sym, tuple_2_sym)
 # tuple_2 = tuple([1,2,3])
 # tuple_2_1 = tuple(range(0, 11))
 # tuple_3 = 1,2,3
