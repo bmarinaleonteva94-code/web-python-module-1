@@ -2,8 +2,6 @@ numbers = (1,2,3,4,33,4,222,11,2,333,32)
 
 stats = {}
 
-stats = {}
-
 for num in numbers:
     length = len(str(abs(num)))
     stats[length] = stats.get(length, 0) +1

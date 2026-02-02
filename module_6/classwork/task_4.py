@@ -8,6 +8,8 @@ network = {
 }
 user = "me"
 my_friends = network[user]
+print(my_friends)
+
 
 friends_of_friends = set()
 for friend in my_friends:
