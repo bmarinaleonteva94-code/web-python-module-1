@@ -134,7 +134,7 @@ with open ("report.txt", "w", encoding="utf-8") as f:
 
    f.write("    Итоговые остатки: \n")
    for product, quantity in total_count.items():
-        f.write(f"  {product}: {quantity}\n")
+        f.write(f"  {product}: {quantity} \n")
    f.write("\n")
 
    f.write("    Общее поступление: \n")
@@ -148,13 +148,12 @@ with open ("report.txt", "w", encoding="utf-8") as f:
    f.write("\n")
 
    f.write("    Товары с отрицательным остатком: \n")
-   for product, quantity in total_count.items():
-      if total_count[product] < 0:
-         f.write(f"{product}: {total_count[product]} \n")
+   for product in negative_products:
+      f.write(f"{product}: {total_count[product]} \n")
    f.write("\n")
 
    f.write("    Товары без поступлений, но с отгрузкой: \n")
-   f.write(f"{negative_products} \n")
+   f.write(f"{no_in_but_out} \n")
    f.write("\n")
 
    f.write("    Товар с максимальным поступлением: \n")
@@ -166,3 +165,6 @@ with open ("report.txt", "w", encoding="utf-8") as f:
    f.write("\n")
 
    f.write("    Даты операций с яблоком: \n")
+   apple_dates = product_dates.get("яблоко", set())
+   for date in apple_dates:
+      f.write(f"{date} \n")

@@ -75,5 +75,17 @@ for date, name, action in events:
     if action == "ENTER":
         if inside[name]:
             errors.add(name)
-            inside[name] = True
-            
+        inside[name] = True
+        stats[name]["ENTER"] += 1
+        daily_enters[date] += 1
+    else:
+        if not inside[name]:
+            errors.add(name)
+        inside[name] = False
+        stats[name]["EXIT"] += 1
+    max_day = None
+    max_enters = 0
+    for date, count in daily_enters.items():
+        if count > max_enters:
+            max_day = date
+            max_enters = count            
